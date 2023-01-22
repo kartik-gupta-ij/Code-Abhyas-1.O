@@ -1,11 +1,12 @@
-x=int(input())
-print(x,end=' ')
-def al(i):
-    if(i%2==1):
-        if(i!=1):
-            print(i*3+1,end=' ')
-            al(i*3+1)
+n=int(input())
+A=[]
+A.append(n)
+while n!=1:
+    if n%2 ==0:
+        n=n//2
+        A.append(n)
     else:
-        print(i//2,end=' ')
-        al(i//2)
-al(x)
+        n=(n*3)+1
+        A.append(n)
+for i in range(len(A)):
+    print(A[i],end=" ")
